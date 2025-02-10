@@ -34,7 +34,7 @@ function agregar_estilos_dinamicos() {
     //$imagen_id = get_option('imagen_fondo_home'); // Supongamos que la imagen se guarda en Personalizar
     $imagen_id = 55;
     $imagen_full = wp_get_attachment_image_src($imagen_id, 'full')[0];
-    $imagen_large = wp_get_attachment_image_src($imagen_id, 'large')[0];
+    $imagen_large = wp_get_attachment_image_src($imagen_id, 'medum_large')[0];
     $imagen_medium = wp_get_attachment_image_src($imagen_id, 'medium')[0];
     $imagen_id_logo = 56;
     $imagen_thumbnail_logo = wp_get_attachment_image_src($imagen_id_logo, 'thumbnail')[0];
@@ -42,7 +42,7 @@ function agregar_estilos_dinamicos() {
     $imagen_full_logo = wp_get_attachment_image_src($imagen_id_logo, 'full')[0];
 
     $css = "
-        @media (min-width: 600px) {
+        @media (max-width: 600px) {
             .hero-section {
                 background-image: url('{$imagen_medium}');
             }
@@ -58,7 +58,7 @@ function agregar_estilos_dinamicos() {
                 background-image: url('{$imagen_full_logo}');
             }
         }
-        @media (max-width: 1440px) {
+        @media (min-width: 1440px) {
             .hero-section {
                 background-image: url('{$imagen_large}');
             }
