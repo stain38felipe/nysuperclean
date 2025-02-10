@@ -1,0 +1,207 @@
+/*
+Theme Name: NY Super Clean
+Theme URI: http://nysuperclean.com
+Author: Soft ID Co
+Author URI: http://softid.com.co
+Description: Tema personalizado para NY Super Clean.
+Version: 1.0
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+@font-face {
+    font-family: 'Freight';
+    src: url('fonts/freight_text_book-webfont.woff') format('woff2'),
+         url('fonts/freight_text_book-webfont.woff2') format('woff'),
+         url('fonts/freight_text_book.otf') format('opentype'); /* Solo como fallback */
+    font-weight: normal;
+    font-style: normal;
+}
+
+footer {
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    color: #36707A; /* Color de texto opcional */
+    text-align: center;
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    height: 70px; /* Altura de 30px */
+    background-color: #8cbdc0; /* Color de fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+
+}
+
+footer p {
+    width: 70%;
+    padding-top: 25px;
+}
+
+header {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    height: 70px; /* Altura de 30px */
+    background-color: #3F7079; /* Color de fondo */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+.content-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh; /* Espacio en blanco */
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.imagen-responsiva {
+    width: 100%;
+    max-width: 800px; /* Ajusta según necesites */
+    height: auto; /* Mantiene la proporción */
+    display: block;
+    margin: 0 auto;
+}
+
+.menu-principal {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-principal li {
+    background-color: #2f5d62;
+    display: inline-block;
+    height: 60px;
+    margin: 0px;
+    position: relative;
+}
+
+.menu-principal a {
+    color: white;
+    display: block;
+    font-family: 'Freight', sans-serif;
+    font-size: 18px;
+    margin: 0px;
+    padding: 14px 14px;
+    text-decoration: none;
+}
+
+/* Estilo de los submenús */
+.menu-principal li ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #3b7460;
+    list-style: none;
+    padding: 0;
+    min-width: 180px;
+    z-index: 100;
+}
+
+.menu-principal li ul li {
+    display: block;
+    width: 100%;
+    background-color: #3F7079;
+}
+
+.menu-principal li ul li a {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900; /* Aplica la versión Black */
+    padding: 10px;
+    color: white;
+    display: block;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out; /* Efecto de transición suave */
+}
+
+.menu-principal li ul li a:hover {
+    color: #28575F; /* Color cuando el mouse está encima */
+}
+
+/* Mostrar submenú al pasar el mouse */
+.menu-principal li:hover > ul {
+    display: block;
+        background: linear-gradient(to bottom, #143C45 0%, #2C5A64 10%, #3F7079 100%);
+}
+
+/* Estilo base del menú */
+.nav-menu {
+    background: #2f5d62; /* Color de fondo */
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center; /* Centra el menú horizontalmente */
+    align-items: center;
+    width: 100%;
+}
+
+.nav-bar {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seccion-fondo {
+    position: relative;
+    width: 100%;
+    height: 207px; /* Ajusta la altura según necesites */
+    background-image: url('http://localhost:8888/nysuperclean/wp-content/uploads/2025/02/liberty.png');
+    background-size: 45% auto; /* 80% del ancho, alto automático */
+    background-position: center top; /* bottom */
+    background-repeat: no-repeat;
+    /* padding-top: 15px; */
+}
+
+.texto-seccion {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Menú responsive: en pantallas menores a 768px */
+@media (min-width: 768px) {
+   
+}
+
+@media (min-width: 1600px) {
+    .seccion-fondo {
+        height: 290px; 
+    }
+}
+
