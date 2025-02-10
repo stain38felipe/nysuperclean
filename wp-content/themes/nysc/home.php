@@ -6,8 +6,18 @@ get_header();
 ?>
 
 <main class="content-area">
+    <section class="hero-section">
+        <div class="hero-logo"></div>
+        <div class="hero-content">
+            Housekeeping Management
+        </div>
+    </section>
     <div class="container">
-        <h1 class="text-center">Bienvenido a mi página en blanco</h1>
+        <!-- Sección Hero (Imagen + Logo) -->
+        <?php
+            wp_enqueue_style('home-estilos', get_stylesheet_uri());
+        ?>
+        
     </div>
 </main>
 <!-- Bloque encima del footer -->
