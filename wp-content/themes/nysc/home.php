@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: HomePage
+Template Name: NYSC-HomePage
 */
 get_header(); 
 ?>
@@ -41,7 +41,7 @@ get_header();
     </section>
 </main>
 <!-- Bloque encima del footer -->
-<section class="seccion-fondo">
+<section class="seccion-fondooooooo">
     <div class="overlay">
         
     </div>
