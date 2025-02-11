@@ -1,6 +1,6 @@
 <?php
 function cargar_estilos() {
-    wp_enqueue_style('home-estilos', get_stylesheet_uri()); // Cambiado de 'main-style' a 'tema-estilos'
+    wp_enqueue_style('home-estilos', get_stylesheet_uri(), array(), filemtime(get_stylesheet_directory() . '/style.css')); // Cambiado de 'main-style' a 'tema-estilos'
     wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/js/custom.js', array('jquery'), null, true );
 }
 add_action( 'wp_enqueue_scripts', 'cargar_estilos' );
@@ -46,7 +46,7 @@ function agregar_estilos_dinamicos() {
             .hero-section {
                 background-image: url('{$imagen_medium}');
             }
-            .hero-logo {
+            .hero-logo page-logo {
                 background-image: url('{$imagen_medium_logo}');
             }
         }
@@ -54,7 +54,7 @@ function agregar_estilos_dinamicos() {
             .hero-section {
                 background-image: url('{$imagen_large}');
             }
-            .hero-logo {
+            .hero-logo .page-logo {
                 background-image: url('{$imagen_full_logo}');
             }
         }
@@ -62,7 +62,7 @@ function agregar_estilos_dinamicos() {
             .hero-section {
                 background-image: url('{$imagen_large}');
             }
-            .hero-logo {
+            .hero-logo .page-logo {
                 background-image: url('{$imagen_full_logo}');
             }
         }
@@ -73,7 +73,7 @@ function agregar_estilos_dinamicos() {
             .hero-section {
                 background-image: url('{$imagen_full}');
             }
-            .hero-logo {
+            .hero-logo .page-logo {
                 background-image: url('{$imagen_full_logo}');
             }
         }
