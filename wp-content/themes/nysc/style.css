@@ -66,6 +66,19 @@ header nav ul li a {
     font-weight: bold;
 }
 
+.about-us-section {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Ajusta la altura según necesites */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('http://localhost:8888/nysuperclean/wp-content/uploads/2025/02/Recurso-4.png');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
 .another-page-content1 {
     background-color: #E6EEEE;
     position: relative; /* Mantiene el flujo normal de la página */
@@ -73,20 +86,6 @@ header nav ul li a {
     height: auto;
     width: 100%;
 }
-
-
-.centered-text {
-    order: 1; /* Se muestra primero */
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra horizontalmente */
-    justify-content: center; /* Alinea verticalmente si es necesario */
-    text-align: center;
-    margin: 0 auto; /* Para centrar si tiene ancho fijo */
-    width: 300px;
-    height: 30px;
-  }
 
 .another-page-content1 h3 p{
     background-color: #37717A;
@@ -124,6 +123,46 @@ header nav ul li a {
     position: absolute;
     top: -4%;
     left: 41%;
+}
+
+.another-page-content3 {
+    background-color: white;
+}
+
+.another-page-content3, .another-page-content4 {
+    position: relative; /* Mantiene el flujo normal de la página */
+    height: auto;
+    width: 100%;
+}
+
+.another-page-content3 h3 p, .another-page-content4 h3 p{
+    background-color: #37717A;
+    color: white;
+    font-family: 'Freight', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    width: 200px;
+    height: 80px;
+    padding: 20px;
+    text-transform: uppercase;
+    align-content: center;
+}
+
+.another-page-content4 {
+    background-color: #E6EEEE;
+}
+
+.centered-text {
+    order: 1; /* Se muestra primero */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Alinea verticalmente si es necesario */
+    text-align: center;
+    margin: 0 auto; /* Para centrar si tiene ancho fijo */
+    width: 300px;
+    height: 30px;
 }
 
 .content-area {
@@ -213,6 +252,19 @@ header nav ul li a {
     height: auto; /* Mantiene la proporción */
     display: block;
     margin: 0 auto;
+}
+
+.left-text {
+    order: 1; /* Se muestra primero */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    position: absolute;
+    text-align: center;
+    z-index: 3;
+    top: 45px;
+    left: 114px;
 }
 
 .menu-principal {
@@ -321,7 +373,7 @@ header nav ul li a {
     margin: 0 auto;
 }
 
-.page-content1 {
+.page-content1, .page-content3 {
 
     flex: 1;
     position: relative;
@@ -350,11 +402,19 @@ header nav ul li a {
     padding: 20px;
 }
 
-.page-content2 p strong {
+.page-content2 p strong, .page-content3 p strong {
     text-align: left;
     font-family: 'Myriad Pro', sans-serif;
     font-size: 20px;
     color: #D2462B;
+}
+
+.page-content3 p {
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: #37717A;
+    padding: 10px 0;
 }
 
 
@@ -364,6 +424,7 @@ header nav ul li a {
     align-items: center; /* Alinea los elementos en el centro verticalmente */
     justify-content: space-between; /* Separa los elementos a los lados */
     padding: 20px;
+    z-index: 1;
 }
 
 .page-image1 img {
@@ -403,6 +464,20 @@ header nav ul li a {
     font-size: 20px;
     color: #8cbcbf;
 }
+
+.right-text {
+    order: 1; /* Se muestra primero */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    position: absolute;
+    text-align: center;
+    z-index: 3;
+    top: 45px;
+    left: 734px;
+}
+
 .row-home {
     display: flex;
     justify-content: center;
@@ -462,12 +537,6 @@ header nav ul li a {
     color: #366F7A;
     font-size: 16px;
     text-align: left;
-}
-
-.services-section {
-    background-color: white; /* Color de fondo claro */
-    padding: 50px 0 0 0;
-    width: 100%;
 }
 
 .texto-seccion {
