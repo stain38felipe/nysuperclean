@@ -66,7 +66,7 @@ $contenido_vis = apply_filters('the_content', $pagina_vis->post_content); // Apl
         </div>
         
     </section>
-    <section class="another-page-content4" id="miss">
+    <section class="another-page-content4" id="viss">
         <div class="guest-retention">
             <div class="line"></div>
             <p class="guest-title">We clean, you take care of guest retention!</p>
