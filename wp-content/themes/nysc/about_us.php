@@ -67,6 +67,11 @@ $contenido_vis = apply_filters('the_content', $pagina_vis->post_content); // Apl
         
     </section>
     <section class="another-page-content4" id="miss">
+        <div class="guest-retention">
+            <div class="line"></div>
+            <p class="guest-title">We clean, you take care of guest retention!</p>
+            <div class="line"></div>
+        </div>
         <div class="right-text" >
             <h3>
                 <?php 
@@ -91,8 +96,7 @@ $contenido_vis = apply_filters('the_content', $pagina_vis->post_content); // Apl
                 <img src="<?php echo $imagen_large_vis; ?>" ></img>
             </div>
             
-        </div>
-        
+        </div>    
     </section>
     
 </main>
