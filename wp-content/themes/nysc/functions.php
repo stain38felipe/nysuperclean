@@ -19,7 +19,7 @@ add_action('widgets_init', 'my_theme_widgets_init');
 
 function registrar_menus() {
     register_nav_menus(array(
-        'site_menu' => __('Menú Principal', 'tu-tema')
+        'site_menu' => __('Menú Principal', 'nysc')
     ));
 }
 add_action('after_setup_theme', 'registrar_menus');
@@ -34,35 +34,46 @@ function agregar_estilos_dinamicos() {
     //$imagen_id = get_option('imagen_fondo_home'); // Supongamos que la imagen se guarda en Personalizar
     $imagen_id = 55;
     $imagen_full = wp_get_attachment_image_src($imagen_id, 'full')[0];
-    $imagen_large = wp_get_attachment_image_src($imagen_id, 'medum_large')[0];
-    $imagen_medium = wp_get_attachment_image_src($imagen_id, 'medium')[0];
+    $imagen_medium = wp_get_attachment_image_src($imagen_id, 'medium')[0]; //300
+    $imagen_medium_large = wp_get_attachment_image_src($imagen_id, 'medium_large')[0];//768
+    $imagen_large = wp_get_attachment_image_src($imagen_id, 'large')[0]; //1024
+    $imagen_1536 = wp_get_attachment_image_src($imagen_id, '1536x1536')[0]; // 1536px width
+    
     $imagen_id_logo = 56;
     $imagen_thumbnail_logo = wp_get_attachment_image_src($imagen_id_logo, 'thumbnail')[0];
     $imagen_medium_logo = wp_get_attachment_image_src($imagen_id_logo, 'medium')[0];
     $imagen_full_logo = wp_get_attachment_image_src($imagen_id_logo, 'full')[0];
 
     $css = "
-        @media (max-width: 600px) {
+        @media (min-width: 300px) {
             .hero-section {
                 background-image: url('{$imagen_medium}');
             }
-            .hero-logo page-logo {
+            .hero-logo, .page-logo {
                 background-image: url('{$imagen_medium_logo}');
             }
         }
-        @media (max-width: 1024px) {
+        @media (min-width: 600px) {
             .hero-section {
-                background-image: url('{$imagen_large}');
+                background-image: url('{$imagen_medium_large}');
             }
-            .hero-logo .page-logo {
+            .hero-logo, .page-logo {
+                background-image: url('{$imagen_medium_logo}');
+            }
+        }
+        @media (min-width: 1024px) {
+            .hero-section {
+                background-image: url('{$imagen_large}'); 
+            }
+            .hero-logo, .page-logo {
                 background-image: url('{$imagen_full_logo}');
             }
         }
         @media (min-width: 1440px) {
             .hero-section {
-                background-image: url('{$imagen_large}');
+                background-image: url('{$imagen_1536}');
             }
-            .hero-logo .page-logo {
+            .hero-logo, .page-logo {
                 background-image: url('{$imagen_full_logo}');
             }
         }
@@ -73,7 +84,7 @@ function agregar_estilos_dinamicos() {
             .hero-section {
                 background-image: url('{$imagen_full}');
             }
-            .hero-logo .page-logo {
+            .hero-logo, .page-logo {
                 background-image: url('{$imagen_full_logo}');
             }
         }

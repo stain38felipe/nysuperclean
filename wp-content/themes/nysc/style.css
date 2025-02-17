@@ -296,10 +296,12 @@ input[type="checkbox"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('http://localhost:8888/nysuperclean/wp-content/uploads/2025/02/pantalla_principal-e1739307112311.png');
+/*     background-image: url('http://localhost:8888/nysuperclean/wp-content/uploads/2025/02/pantalla_principal-e1739307112311.png');
+ */    
     background-size: cover;
     background-position: center;
     overflow: hidden;
+    background-repeat: no-repeat;
 }
 
 .hero-image {
@@ -784,7 +786,7 @@ input[type="submit"]:hover {
 
 /* Efecto activo */
 button:active,
-input[type="submit"]:active {
+input[type="submit"]:active { 
     transform: translateY(2px);
     box-shadow: 0 3px 10px rgba(42, 90, 99, 0.5);
 }
@@ -792,33 +794,33 @@ input[type="submit"]:active {
 /* Menú responsive: en pantallas menores a 600px */
 @media (min-width: 600px) {
     .hero-section {
-        background-image: url('http://localhost:8888/nysuperclean/wp-content/uploads/2025/02/pantalla_principal-e1739307112311.png');
+       /* background-image: url('http://localhost:8888/nysuperclean/wp-content/uploads/2025/02/pantalla_principal-e1739307112311.png'); */
     }
 }
 
 /* Usar la versión "large" en pantallas medianas */
 @media (min-width: 1024px) {
     .hero-section {
-        background-image: url('http://localhost:8888/nysuperclean/wp-content/uploads/2025/02/pantalla_principal-e1739307112311.png');
+       /* background-image: url('http://localhost:8888/nysuperclean/wp-content/uploads/2025/02/pantalla_principal-e1739307112311.png'); */
         height: 500px;
     }
 }
 
 @media (min-width: 1440px) {
     .hero-section {
-        background-image: url('http://localhost:8888/nysuperclean/wp-content/uploads/2025/02/pantalla_principal-e1739307112311.png');
+       /* background-image: url('http://localhost:8888/nysuperclean/wp-content/uploads/2025/02/pantalla_principal-e1739307112311.png'); */
         height: 730px;
     }
     .seccion-fondooooooo {
         height: 220px; 
     }
 }
-@media (max-width: 1600px) {
+@media (min-width: 1600px) {
     .seccion-fondooooooo {
         height: 220px; 
     }
     .hero-section {
-        background-image: url('http://localhost:8888/nysuperclean/wp-content/uploads/2025/02/pantalla_principal-e1739307112311.png');
+      /*  background-image: url('http://localhost:8888/nysuperclean/wp-content/uploads/2025/02/pantalla_principal-e1739307112311.png'); */
         height: 930px;
     }
 }
