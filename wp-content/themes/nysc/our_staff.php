@@ -54,12 +54,11 @@ $contenido_oc = apply_filters('the_content', $pagina_oc->post_content);
             </div>
         </div>
     </section>
-    <section class="another-page-content6" id="wyg">
+    <section class="another-page-content6" id="oc">
         <div class="centered-text" >
             <h3>
                 <?php 
                     echo $pagina_oc->post_title; 
-                //print_r($pagina_wwo); //
                 ?>
             </h3>
         </div>
