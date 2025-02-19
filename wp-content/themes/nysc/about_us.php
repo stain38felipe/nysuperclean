@@ -57,8 +57,15 @@ $contenido_vis = apply_filters('the_content', $pagina_vis->post_content); // Apl
                     $imagen_medium_large_mis = wp_get_attachment_image_src($imagen_id_mis, 'medium-large')[0];
                     $imagen_large_mis = wp_get_attachment_image_src($imagen_id_mis, 'large')[0];
                     $imagen_full_mis = wp_get_attachment_image_src($imagen_id_mis, 'full')[0];
+
+                    $imagen_id_mob = 130;
+                    $imagen_thumbnail_mob = wp_get_attachment_image_src($imagen_id_mob, 'thumbnail')[0];
+                    $imagen_medium_mob = wp_get_attachment_image_src($imagen_id_mob, 'medium')[0];
                 ?>
-                <img src="<?php echo $imagen_large_mis; ?>" ></img>
+                <img src="<?php echo esc_url($imagen_large_mis); ?>" 
+                    srcset="<?php echo esc_url($imagen_medium_mob); ?> 430w"
+                    sizes="(max-width: 430px) 100vw" 
+                    alt="Descripción de la imagen">
             </div>
             <div class="page-content3">
                 <?php echo $contenido_mis; ?>
@@ -92,8 +99,15 @@ $contenido_vis = apply_filters('the_content', $pagina_vis->post_content); // Apl
                     $imagen_medium_large_vis = wp_get_attachment_image_src($imagen_id_vis, 'medium-large')[0];
                     $imagen_large_vis = wp_get_attachment_image_src($imagen_id_vis, 'large')[0];
                     $imagen_full_vis = wp_get_attachment_image_src($imagen_id_vis, 'full')[0];
+
+                    $imagen_id_vis_mob = 129;
+                    $imagen_medium_vis_mob = wp_get_attachment_image_src($imagen_id_vis_mob, 'medium')[0];
+
                 ?>
-                <img src="<?php echo $imagen_large_vis; ?>" ></img>
+                <img src="<?php echo esc_url($imagen_large_vis); ?>" 
+                    srcset="<?php echo esc_url($imagen_medium_vis_mob); ?> 430w"
+                    sizes="(max-width: 430px) 100vw" 
+                    alt="Descripción de la imagen">
             </div>
             
         </div>    

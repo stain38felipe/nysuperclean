@@ -77,7 +77,7 @@ function agregar_estilos_dinamicos() {
     $imagen_1536_lc = wp_get_attachment_image_src($imagen_id_lc, '1536x1536')[0]; // 1536px width
 
     $css = "
-        @media (min-width: 300px) {
+        @media (max-width: 430px) {
             .hero-section {
                 background-image: url('{$imagen_medium}');
             }
