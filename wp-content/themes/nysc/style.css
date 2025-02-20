@@ -188,7 +188,7 @@ ul {
     justify-content: center; /* Alinea verticalmente si es necesario */
     text-align: center;
     margin: 0 auto; /* Para centrar si tiene ancho fijo */
-    width: 300px;
+    width: 310px;
     height: auto;
 }
 
@@ -547,12 +547,13 @@ input[type="checkbox"] {
     justify-content: space-between; /* Separa los elementos a los lados */
     padding: 20px;
     z-index: 1;
+    max-width: 40%;
 }
 
 .page-image1 img {
     width: 100%;
     height: auto;
-    padding: 25px 25px !important;
+    padding: 5px !important;
 }
 
 .page-logo {
@@ -695,6 +696,10 @@ input[type="checkbox"] {
     text-align: center;
 }
 
+.title-mobile  p{
+    display: none;
+}
+
 /* Estilizar los campos de entrada */
 input[type="text"],
 input[type="email"],
@@ -776,9 +781,18 @@ input[type="submit"]:active {
     box-shadow: 0 3px 10px rgba(42, 90, 99, 0.5);
 }
 
+#we_keep p {
+    display: none;
+}
+
 @media (max-width: 430px) {
     button, input[type="submit"] {
         width: 40% !important;
+    }
+
+    footer p {
+        font-size: 9px;
+        width: 90%;
     }
 
     .form-text {
@@ -794,14 +808,14 @@ input[type="submit"]:active {
 
     }
 
-    .about-us-section .page-logo {
+    .about-us-section .page-logo, .our-staff-section .page-logo {
        position: absolute;
        width: 150px;
        height: 69px;
        top: 10%;
     }
 
-    .about-us-section .page-title h2 {
+    .about-us-section .page-title h2, .our-staff-section .page-title h2 {
         position: absolute;
         top: 90%;
     }
@@ -830,32 +844,145 @@ input[type="submit"]:active {
         font-size: 20px;
     }
 
-    .page-container{
+    .another-page-content4 h3 {
+        margin: 0 auto;
+    }
+
+    .another-page-content4 h3 p {
+        width: 110px;
+        height: auto;
+        padding: 10px;
+        font-size: 20px;
+        margin: 0 auto;
+    }
+
+    .another-page-content4 .page-container .page-image1 img {
+        top: 120px;
+        left: 300px;
+    }
+
+    .another-page-content5 .page-container {
+        align-items: initial;
+    }
+
+    .another-page-content5 .page-container .page-image1 {
+        max-width: 50%;
+        margin-top: 55px;
+    }
+
+    .another-page-content5 .centered-text, .another-page-content5 .centered-text p {
+        display: none;
+    }
+
+    .another-page-content6 .centered-text h3 {
+        font-size: 23px;
+    }
+
+    .page-content4 p {
+        padding: 5px;
+    }
+
+
+    ul {
+        padding: 5px;
+    }
+
+    .guest-title {
+        font-size: 15px;
+        margin: 0 auto;
+    }
+
+    .left-text {
+        left: 2%;
+        top: 53px;
+    }
+
+    .our-staff-section, .about-us-section, .lets-connect-section {
+        position: relative;
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        background-color: #E6EEEE;
+        
+    }
+
+    .page-container {
+        gap: 0;
         width: 100%;
     }
 
-    .page-content2 p {
-        font-size: 16px;
+    .page-content1 p{
+        font-size: 13px;
+    }
+
+    .page-content1 p strong {
+        font-size: 15px;
+    }
+
+    .page-content2 p, .page-content4 p, li {
+        font-size: 13px;
     }
 
     .page-content3 {
         flex: 2;
         line-height: 1.3;
-        max-width: 60%;
-        width: 60%;
+        max-width: 55%;
+        width: 50%;
+        left: 2%;
     }
 
     .page-content3 p {
-        font-size: 16px;
+        font-size: 13px;
+        width: 90%;
+        padding: 0;
     }
 
-    .page-container {
-        gap: 0;
+    .page-content3 p strong{
+     font-size: 17px;   
+    }
+
+
+
+    #we_keep {
+        position: relative;
+        display: inline-block; /* Adjust according to layout needs */
+        text-align: center;
+        width: 50%;
+    }
+
+    #we_keep img {
+        height: auto;
+        display: block;
+        width: 100%;
+        transform: translateX(-1%);
+        position: relative;
+        left: 0;
+        top: 0; 
+    }
+
+    #we_keep p {
+        display: inline-block;
+        font-family: 'Myriad Pro';
+        font-size: 25px;
+        text-transform: uppercase;
+        color: #37717A; /* Color del texto */
+        width: 90%;
+        line-height: 1;
     }
 
     .page-image1 {
         flex: 1;
         width: 25%;
+        padding: 5px;
+    }
+
+    .page-image1 img {
+        position: absolute;
+        top: 108px;
+        left: 23%;
+        transform: translateX(-50%);
+        z-index: 2;
+        width: 44%;
     }
 
     .page-logo{
@@ -879,13 +1006,17 @@ input[type="submit"]:active {
         left: 0%;
     }
 
-    .our-staff-section, .about-us-section, .lets-connect-section {
-        position: relative;
-        display: flex;
-        align-items: baseline;
-        justify-content: center;
-        background-color: #E6EEEE;
-        
+    .quote-text code {
+        font-size: 25px;
+    }
+
+    .quote-text p {
+        font-size: 14px;
+    }
+
+    .right-text{
+        top: 73px;
+        left: 57%;
     }
 
 /* Menú responsive: en pantallas menores a 600px */

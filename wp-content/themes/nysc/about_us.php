@@ -62,10 +62,14 @@ $contenido_vis = apply_filters('the_content', $pagina_vis->post_content); // Apl
                     $imagen_thumbnail_mob = wp_get_attachment_image_src($imagen_id_mob, 'thumbnail')[0];
                     $imagen_medium_mob = wp_get_attachment_image_src($imagen_id_mob, 'medium')[0];
                 ?>
-                <img src="<?php echo esc_url($imagen_large_mis); ?>" 
-                    srcset="<?php echo esc_url($imagen_medium_mob); ?> 430w"
-                    sizes="(max-width: 430px) 100vw" 
-                    alt="Descripción de la imagen">
+                <img src="<?php echo esc_url($imagen_medium_large_mis); ?>" 
+                    srcset="
+                        <?php echo esc_url($imagen_medium_mob); ?> 300w, 
+                        <?php echo esc_url($imagen_medium_mis); ?> 768w,
+                        <?php echo esc_url($imagen_medium_mis); ?> 1024w"
+                    sizes="(max-width: 430px) 100vw, 
+                            (max-width: 768px) 90vw, 
+                            (min-width: 1024px) 80vw">
             </div>
             <div class="page-content3">
                 <?php echo $contenido_mis; ?>
@@ -104,10 +108,14 @@ $contenido_vis = apply_filters('the_content', $pagina_vis->post_content); // Apl
                     $imagen_medium_vis_mob = wp_get_attachment_image_src($imagen_id_vis_mob, 'medium')[0];
 
                 ?>
-                <img src="<?php echo esc_url($imagen_large_vis); ?>" 
-                    srcset="<?php echo esc_url($imagen_medium_vis_mob); ?> 430w"
-                    sizes="(max-width: 430px) 100vw" 
-                    alt="Descripción de la imagen">
+                 <img src="<?php echo esc_url($imagen_medium_large_vis); ?>" 
+                    srcset="
+                        <?php echo esc_url($imagen_medium_vis_mob); ?> 300w, 
+                        <?php echo esc_url($imagen_medium_vis); ?> 768w,
+                        <?php echo esc_url($imagen_medium_large_vis); ?> 1024w"
+                    sizes="(max-width: 430px) 100vw, 
+                            (max-width: 768px) 90vw, 
+                            (min-width: 1024px) 80vw">
             </div>
             
         </div>    
