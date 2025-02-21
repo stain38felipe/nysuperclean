@@ -51,25 +51,44 @@ $contenido_vis = apply_filters('the_content', $pagina_vis->post_content); // Apl
         <div class="page-container">
             <div class="page-image1">
                 <?php
-                    $imagen_id_mis = 90;
+                    $imagen_id_mis = 90;// fotos para web
                     $imagen_thumbnail_mis = wp_get_attachment_image_src($imagen_id_mis, 'thumbnail')[0];
                     $imagen_medium_mis = wp_get_attachment_image_src($imagen_id_mis, 'medium')[0];
                     $imagen_medium_large_mis = wp_get_attachment_image_src($imagen_id_mis, 'medium-large')[0];
                     $imagen_large_mis = wp_get_attachment_image_src($imagen_id_mis, 'large')[0];
                     $imagen_full_mis = wp_get_attachment_image_src($imagen_id_mis, 'full')[0];
 
-                    $imagen_id_mob = 130;
+                    $imagen_id_mob = 130;//fotos para mobile
                     $imagen_thumbnail_mob = wp_get_attachment_image_src($imagen_id_mob, 'thumbnail')[0];
                     $imagen_medium_mob = wp_get_attachment_image_src($imagen_id_mob, 'medium')[0];
+                    $imagen_medium_large_mob = wp_get_attachment_image_src($imagen_id_mob, 'medium-large')[0];
+                    $imagen_large_mob = wp_get_attachment_image_src($imagen_id_mob, 'large')[0];
+                    $imagen_full_mob = wp_get_attachment_image_src($imagen_id_mob, 'full')[0];
+
+                    // Definir imagen por defecto
+                    $imagen_por_defecto = esc_url($imagen_large_mis);
                 ?>
-                <img src="<?php echo esc_url($imagen_medium_large_mis); ?>" 
+                <!-- <img src="<?php //echo esc_url($imagen_medium_large_mob); ?>" 
                     srcset="
-                        <?php echo esc_url($imagen_medium_mob); ?> 300w, 
-                        <?php echo esc_url($imagen_medium_mis); ?> 768w,
-                        <?php echo esc_url($imagen_medium_mis); ?> 1024w"
+                        <?php //echo esc_url($imagen_full_mob); ?> 300w, 
+                        <?php //echo esc_url($imagen_full_mob); ?> 768w,
+                        <?php //echo esc_url($imagen_large_mis); ?> 1024w,
+                        <?php //echo esc_url($imagen_full_mis); ?> 1440w"
                     sizes="(max-width: 430px) 100vw, 
                             (max-width: 768px) 90vw, 
-                            (min-width: 1024px) 80vw">
+                            (max-width: 1024px) 80vw,
+                            (min-width: 1440px) 70vw"> -->
+                <picture>
+                    <!-- Imagen para pantallas menores a 430px -->
+                    <source srcset="<?php echo esc_url($imagen_full_mob); ?>" media="(max-width: 430px)">
+                    <!-- Imagen para pantallas menores a 768px -->
+                    <source srcset="<?php echo esc_url($imagen_full_mob); ?>" media="(max-width: 768px)">
+                    <!-- Imagen para pantallas mayores a 1024px -->
+                    <source srcset="<?php echo esc_url($imagen_large_mis); ?>" media="(min-width: 1024px)">
+                    <!-- Imagen por defecto (si `source` no funciona) -->
+                    <img src="<?php echo esc_url($imagen_large_mis); ?>" alt="Descripción de la imagen">
+                </picture>
+
             </div>
             <div class="page-content3">
                 <?php echo $contenido_mis; ?>
@@ -105,17 +124,36 @@ $contenido_vis = apply_filters('the_content', $pagina_vis->post_content); // Apl
                     $imagen_full_vis = wp_get_attachment_image_src($imagen_id_vis, 'full')[0];
 
                     $imagen_id_vis_mob = 129;
+                    $imagen_thum_vis_mob = wp_get_attachment_image_src($imagen_id_vis_mob, 'thumbnail')[0];
                     $imagen_medium_vis_mob = wp_get_attachment_image_src($imagen_id_vis_mob, 'medium')[0];
+                    $imagen_full_vis_mob = wp_get_attachment_image_src($imagen_id_vis_mob, 'full')[0];
 
                 ?>
-                 <img src="<?php echo esc_url($imagen_medium_large_vis); ?>" 
+                 <!-- <img src="<?php //echo esc_url($imagen_medium_large_vis); ?>" 
                     srcset="
-                        <?php echo esc_url($imagen_medium_vis_mob); ?> 300w, 
-                        <?php echo esc_url($imagen_medium_vis); ?> 768w,
-                        <?php echo esc_url($imagen_medium_large_vis); ?> 1024w"
+                        <?php //echo esc_url($imagen_medium_vis_mob); ?> 300w, 
+                        <?php //echo esc_url($imagen_medium_vis); ?> 768w,
+                        <?php //echo esc_url($imagen_medium_large_vis); ?> 1024w,
+                        <?php //echo esc_url($imagen_large_vis); ?> 1440w,
+                        <?php //echo esc_url($imagen_1536_os); ?> 1536w,
+                        <?php //echo esc_url($imagen_full_vis); ?> 2048w"
                     sizes="(max-width: 430px) 100vw, 
                             (max-width: 768px) 90vw, 
-                            (min-width: 1024px) 80vw">
+                            (min-width: 1024px) 80vw, 
+                            (max-width: 1440px) 75vw,
+                            (max-width: 1536px) 70vw,
+                            (min-width: 1537px) 65vw"> -->
+
+                <picture>
+                    <!-- Imagen para pantallas menores a 430px -->
+                    <source srcset="<?php echo esc_url($imagen_full_vis_mob); ?>" media="(max-width: 430px)">
+                    <!-- Imagen para pantallas menores a 768px -->
+                    <source srcset="<?php echo esc_url($imagen_full_vis_mob); ?>" media="(max-width: 768px)">
+                    <!-- Imagen para pantallas mayores a 1024px -->
+                    <source srcset="<?php echo esc_url($imagen_large_vis); ?>" media="(min-width: 1024px)">
+                    <!-- Imagen por defecto (si `source` no funciona) -->
+                    <img src="<?php echo esc_url($imagen_large_vis); ?>" alt="Descripción de la imagen">
+                </picture>
             </div>
             
         </div>    

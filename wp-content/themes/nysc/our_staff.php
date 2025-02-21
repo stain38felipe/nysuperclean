@@ -54,16 +54,26 @@ $contenido_oc = apply_filters('the_content', $pagina_oc->post_content);
                     $imagen_large_os = wp_get_attachment_image_src($imagen_id_os, 'large')[0];
 
                     $imagen_id_os_mob = 126;
-                    $imagen_medium_os_mob = wp_get_attachment_image_src($imagen_id_os_mob, 'medium')[0];
+                    $imagen_medium_os_mob = wp_get_attachment_image_src($imagen_id_os_mob, 'full')[0];
                 ?>
-                <img src="<?php echo esc_url($imagen_medium_large_os); ?>" 
+                <!-- <img src="<?php //echo esc_url($imagen_medium_large_os); ?>" 
                     srcset="
-                        <?php echo esc_url($imagen_medium_os_mob); ?> 300w, 
-                        <?php echo esc_url($imagen_medium_os); ?> 768w,
-                        <?php echo esc_url($imagen_medium_os_mob); ?> 1024w"
+                        <?php //echo esc_url($imagen_medium_os_mob); ?> 300w, 
+                        <?php //echo esc_url($imagen_medium_os); ?> 768w,
+                        <?php //echo esc_url($imagen_medium_os_mob); ?> 1024w"
                     sizes="(max-width: 430px) 100vw, 
                             (max-width: 768px) 90vw, 
-                            (min-width: 1024px) 80vw">
+                            (min-width: 1024px) 80vw"> -->
+                            <picture>
+                    <!-- Imagen para pantallas menores a 430px -->
+                    <source srcset="<?php echo esc_url($imagen_medium_os_mob); ?>" media="(max-width: 430px)">
+                    <!-- Imagen para pantallas menores a 768px -->
+                    <source srcset="<?php echo esc_url($imagen_medium_os_mob); ?>" media="(max-width: 768px)">
+                    <!-- Imagen para pantallas mayores a 1024px -->
+                    <source srcset="<?php echo esc_url($imagen_meduim_large_os); ?>" media="(min-width: 1024px)">
+                    <!-- Imagen por defecto (si `source` no funciona) -->
+                    <img src="<?php echo esc_url($imagen_large_os); ?>" alt="Descripción de la imagen">
+                </picture>
             </div>
             <div class="page-content1" id="we_keep_txt">
                 <?php  echo $parrafo_3; ?>

@@ -795,6 +795,51 @@ input[type="submit"]:active {
         width: 90%;
     }
 
+    #li_mob{
+        max-width: 100%;
+        font-size: 13px;
+    }
+
+    #service_mob{
+        display:none;
+    }
+
+    #we_keep {
+        position: relative;
+        display: inline-block; /* Adjust according to layout needs */
+        text-align: center;
+        width: 50%;
+    }
+
+    #we_keep img {
+        height: auto;
+        display: block;
+        width: 100%;
+        transform: translateX(-1%);
+        position: relative;
+        left: 0;
+        top: 0; 
+    }
+
+    #we_keep p {
+        display: inline-block;
+        font-family: 'Myriad Pro';
+        font-size: 25px;
+        text-transform: uppercase;
+        color: #37717A; /* Color del texto */
+        width: 90%;
+        line-height: 1;
+    }
+
+    #wyg_serv {
+        height: 870px;
+    }
+
+    #wyg_mob {
+        position: relative;
+        top: -60px;
+    }
+
     .form-text {
         width: 85%;
     }
@@ -808,14 +853,14 @@ input[type="submit"]:active {
 
     }
 
-    .about-us-section .page-logo, .our-staff-section .page-logo {
+    .about-us-section .page-logo, .our-staff-section .page-logo, .service-section .page-logo {
        position: absolute;
        width: 150px;
        height: 69px;
        top: 10%;
     }
 
-    .about-us-section .page-title h2, .our-staff-section .page-title h2 {
+    .about-us-section .page-title h2, .our-staff-section .page-title h2, .service-section .page-title h2 {
         position: absolute;
         top: 90%;
     }
@@ -828,13 +873,17 @@ input[type="submit"]:active {
         width: 100%;
     }
 
-    .another-page-content1 h3 p {
+    .another-page-content1 h3 p, .another-page-content2 h3 p {
         font-size: 20px;
         position: relative;
-        width: 160px;
+        width: 210px;
         height: auto;
         top: 0px;
         left: 0px;
+    }
+
+    .another-page-content2 h3 p {
+        top: -41px;
     }
 
     .another-page-content3 h3 p {
@@ -915,7 +964,7 @@ input[type="submit"]:active {
         font-size: 13px;
     }
 
-    .page-content1 p strong {
+    .page-content1 p strong, .page-content2 p strong {
         font-size: 15px;
     }
 
@@ -939,35 +988,6 @@ input[type="submit"]:active {
 
     .page-content3 p strong{
      font-size: 17px;   
-    }
-
-
-
-    #we_keep {
-        position: relative;
-        display: inline-block; /* Adjust according to layout needs */
-        text-align: center;
-        width: 50%;
-    }
-
-    #we_keep img {
-        height: auto;
-        display: block;
-        width: 100%;
-        transform: translateX(-1%);
-        position: relative;
-        left: 0;
-        top: 0; 
-    }
-
-    #we_keep p {
-        display: inline-block;
-        font-family: 'Myriad Pro';
-        font-size: 25px;
-        text-transform: uppercase;
-        color: #37717A; /* Color del texto */
-        width: 90%;
-        line-height: 1;
     }
 
     .page-image1 {

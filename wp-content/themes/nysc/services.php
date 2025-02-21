@@ -35,7 +35,7 @@ $imagen_url_wyg = get_the_post_thumbnail_url(32, 'full');
             </h3>
         </div>
         <div class="page-container">
-            <div class="page-image1">
+            <div class="page-image1" id="service_mob">
                 <?php
                     $imagen_id_wwo = 74;
                     $imagen_thumbnail_wwo = wp_get_attachment_image_src($imagen_id_wwo, 'thumbnail')[0];
@@ -46,13 +46,13 @@ $imagen_url_wyg = get_the_post_thumbnail_url(32, 'full');
                 ?>
                 <img src="<?php echo $imagen_large_wwo; ?>" ></img>
             </div>
-            <div class="page-content1">
+            <div class="page-content1" id="li_mob">
                 <?php echo $contenido_wwo; ?>
             </div>
         </div>
         
     </section>
-    <section class="another-page-content2" id="wyg">
+    <section class="another-page-content2" id="wyg_serv">
         <div class="centered-text" >
             <h3>
                 <?php 
@@ -61,7 +61,7 @@ $imagen_url_wyg = get_the_post_thumbnail_url(32, 'full');
                 ?>
             </h3>
         </div>
-        <div class="page-content2">
+        <div class="page-content2" id="wyg_mob">
             <?php echo $contenido_wyg; ?>
         </div>
         
