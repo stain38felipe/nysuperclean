@@ -1038,6 +1038,7 @@ input[type="submit"]:active {
         top: 73px;
         left: 57%;
     }
+}
 
 /* Menú responsive: en pantallas menores a 600px */
 @media (min-width: 600px) {
@@ -1072,3 +1073,81 @@ input[type="submit"]:active {
     }
 }
 
+
+/* Contenedor del menú */
+.nav-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Botón de menú hamburguesa */
+.menu-toggle {
+    display: none; /* Oculto en escritorio */
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+/* Estilos para el menú en móviles */
+@media (max-width: 430px) {
+
+    .nav-bar {
+        z-index: 5;
+    }
+
+    .menu-toggle {
+        display: contents;
+        position: relative;
+    }
+
+    .menu-principal {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        background: #2C5D63;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .menu-principal a {
+        padding: 2px;
+    }
+    .menu-principal.active {
+        display: flex;
+        width: 60%;
+        left: 0;
+    }
+
+    .menu-principal li {
+        padding: 0px;
+        height: 30px;
+    }
+
+    .menu-item-has-children > ul {
+        display: none !important; /* Ocultar submenús */
+    }
+
+    .menu-item-has-children > a {
+        pointer-events: auto; /* Permitir hacer clic en el enlace */
+    }
+
+    .menu-principal li:hover {
+        background-color: #103139;
+        transition: background-color 0.3s ease-in-out; /* Agrega una transición suave */
+    }
+
+    ul {
+        border-bottom-left-radius: 20px; /* Redondea la esquina inferior izquierda */
+        border-bottom-right-radius: 20px; /* Redondea la esquina inferior derecha */
+        overflow: hidden; /* Asegura que el contenido dentro del `ul` también respete el borde redondeado */
+    }
+}

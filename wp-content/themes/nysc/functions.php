@@ -5,6 +5,11 @@ function cargar_estilos() {
 }
 add_action( 'wp_enqueue_scripts', 'cargar_estilos' );
 
+function enqueue_custom_scripts() {
+    wp_enqueue_script('menu-script', get_template_directory_uri() . '/js/menu.js', array(), false, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
+
 function my_theme_widgets_init() {
     register_sidebar(array(
         'name' => 'Sidebar',
