@@ -853,7 +853,7 @@ input[type="submit"]:active {
 
     }
 
-    .about-us-section .page-logo, .our-staff-section .page-logo, .service-section .page-logo {
+    .about-us-section .page-logo, .our-staff-section .page-logo, .service-section .page-logo, .hero-section .hero-logo {
        position: absolute;
        width: 150px;
        height: 69px;
@@ -1038,6 +1038,22 @@ input[type="submit"]:active {
         top: 73px;
         left: 57%;
     }
+
+    .row-home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    
+    .service-box {
+        width: 90%; /* Ajusta el ancho al 90% del contenedor */
+        margin-bottom: 20px; /* Espacio entre los elementos */
+    }
+
+    .hero-content {
+        font-size: 16px;
+    }
 }
 
 /* Menú responsive: en pantallas menores a 600px */
@@ -1072,7 +1088,6 @@ input[type="submit"]:active {
         height: 930px;
     }
 }
-
 
 /* Contenedor del menú */
 .nav-container {

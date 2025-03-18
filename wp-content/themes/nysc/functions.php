@@ -39,7 +39,7 @@ function agregar_estilos_dinamicos() {
     //$imagen_id = get_option('imagen_fondo_home'); // Supongamos que la imagen se guarda en Personalizar
     $imagen_id = 55;
     $imagen_full = wp_get_attachment_image_src($imagen_id, 'full')[0];
-    $imagen_medium = wp_get_attachment_image_src($imagen_id, 'medium')[0]; //300
+    $imagen_medium = wp_get_attachment_image_src(132, 'medium')[0]; //300
     $imagen_medium_large = wp_get_attachment_image_src($imagen_id, 'medium_large')[0];//768
     $imagen_large = wp_get_attachment_image_src($imagen_id, 'large')[0]; //1024
     $imagen_1536 = wp_get_attachment_image_src($imagen_id, '1536x1536')[0]; // 1536px width
